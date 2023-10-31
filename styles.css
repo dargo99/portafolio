@@ -627,7 +627,7 @@ h2 {
 
 .progress-bar {
     height: 6px;
-    margin-top: 237px;
+    margin-top: 224px;
     position: relative;
     z-index: 3;
 }
@@ -664,3 +664,6 @@ h2 {
         width: 70%;
     }
 }
+
+/* ponerle delay al fondo */
+/* bgcolorbody */
