@@ -90,8 +90,8 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     color: #BFCFE8;
-    text-shadow: 1px 1px 5px #000;
-    letter-spacing: 9px;
+    text-shadow: 1px 1px 15px #ffefc2;
+    letter-spacing: 7px;
     margin-left: -5px;
     margin-top: -8px;
     text-transform: uppercase;
@@ -426,10 +426,10 @@ h2 {
     top: 0;
     left: 0;
     z-index: 2;
-    color: #FFEFC24c;
+    color: #ffefc2de;
     font-size: 50px;
     font-weight: 700;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #2b2d42e4;
     padding: 5px 10px;
     border-radius: 4px;
     width: 100%;
@@ -445,10 +445,10 @@ h2 {
     top: 0;
     left: 0;
     z-index: 2;
-    color: #FFEFC24c;
+    color: #ffefc2de;
     font-size: 50px;
     font-weight: 700;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #2b2d42e4;
     padding: 5px 10px;
     border-radius: 4px;
     width: 100%;
@@ -466,9 +466,17 @@ h2 {
 .zoom-container:hover {
     box-shadow: 1px 1px 100px #FFEFC290;
 }
+.ludifica .zoom-image.nozoom {
+    filter: blur(10px);
+}
+
+.ludifica > div > div .zoom-image.nozoom:hover  {
+    transition: 0.3s ease-in;
+    filter: blur(0px);
+}
 
 .zoom-image {
-    transition: transform 0.2s ease-in 0s;
+    transition: transform 0.2s ease-in 2s;
     width: 100%;
     object-fit: cover;
     mix-blend-mode: lighten;
@@ -479,7 +487,7 @@ h2 {
     transform: scale(1.3);
     mix-blend-mode: normal;
     opacity: 1;
-    transition: transform 0.2s ease-in 1.5s;
+    transition: transform 0.2s ease-in 1s;
 }
 
 .zoom-container:hover .zoom-image.nozoom {
