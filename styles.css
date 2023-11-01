@@ -60,11 +60,11 @@ h2 {
     margin: 0;
     position: relative;
     bottom: -38px;
-    text-shadow: 1px 1px 5px #000;
     letter-spacing: 1px;
     border-right: 7px solid #DC4B58;
     white-space: nowrap;
     overflow: hidden;
+    text-shadow: 1px 1px 5px #0000008f;
     width: 0ch;
     animation: typing1 0.5s steps(10, end) forwards, blink .5s step-end 0.2s forwards;
 }
@@ -77,7 +77,7 @@ h2 {
     color: #7F96FF;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 5px #000;
+    text-shadow: 1px 1px 5px #0000008f;
     border-right: 7px solid #DC4B58;
     white-space: nowrap;
     overflow: hidden;
@@ -148,10 +148,12 @@ h2 {
     text-decoration: none;
     transform: scale(1, 1);
     transition: .2s ease;
+    mix-blend-mode: lighten;
 }
 
 #profile .me a:hover {
     transform: scale(1.1, 1.1);
+    mix-blend-mode: normal;
 }
 
 #profile .me a div {
@@ -426,10 +428,10 @@ h2 {
     top: 0;
     left: 0;
     z-index: 2;
-    color: #ffefc2de;
+    color: #fff;
     font-size: 50px;
     font-weight: 700;
-    background-color: #2b2d42e4;
+    background-color: #2b2d428c;
     padding: 5px 10px;
     border-radius: 4px;
     width: 100%;
@@ -437,6 +439,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 1px 1px 5px #000;
 }
 
 .afterux::after {
@@ -445,10 +448,10 @@ h2 {
     top: 0;
     left: 0;
     z-index: 2;
-    color: #ffefc2de;
+    color: #ffffff;
     font-size: 50px;
     font-weight: 700;
-    background-color: #2b2d42e4;
+    background-color: #2b2d428c;
     padding: 5px 10px;
     border-radius: 4px;
     width: 100%;
@@ -456,6 +459,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 1px 1px 5px #000;
 }
 
 .afterux:hover::after,
@@ -466,13 +470,17 @@ h2 {
 .zoom-container:hover {
     box-shadow: 1px 1px 100px #FFEFC290;
 }
-.ludifica .zoom-image.nozoom {
+.ludifica > div > div:nth-child(2) .zoom-image.nozoom {
     filter: blur(10px);
 }
 
-.ludifica > div > div .zoom-image.nozoom:hover  {
-    transition: 0.3s ease-in;
+.ludifica > div > div:nth-child(2) .zoom-image.nozoom:hover  {
+    transition: 0.2s ease-in;
     filter: blur(0px);
+}
+
+.ludifica > div > div:first-child:hover {
+    box-shadow: 1px 1px 100px #ffefc200;
 }
 
 .zoom-image {
@@ -675,6 +683,21 @@ h2 {
     .ludifica > div > div, .moreexperiences > div {
         width: 70%;
     }
+}
+
+.crm > div > div:nth-child(1) {
+    clip-path: inset(40px 0);
+    mix-blend-mode: lighten;
+}
+
+.crm > div > div:nth-child(3) {
+    clip-path: inset(70px 0 0 0);
+    mix-blend-mode: lighten;
+}
+
+.crm > div > div:nth-child(1):hover,
+.crm > div > div:nth-child(3):hover {
+    mix-blend-mode: normal;
 }
 
 /* ponerle delay al fondo */
