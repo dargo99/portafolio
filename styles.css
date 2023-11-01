@@ -90,7 +90,7 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     color: #BFCFE8;
-    text-shadow: 1px 1px 15px #ffefc2;
+    text-shadow: 1px 1px 5px #0000008f;
     letter-spacing: 8px;
     margin-left: -5px;
     margin-top: -8px;
@@ -292,7 +292,7 @@ h2 {
 @media screen and (max-width: 936px) {
 
     #main > div {
-        min-height: 92vh;
+        min-height: 74vh;
     }
 
     #portafolio .ludifica p {
@@ -319,10 +319,6 @@ h2 {
         position: relative;
         top: -46px;
         line-height: 20px;
-    }
-
-    #profile .contact {
-        margin-top: -80px;
     }
 
     #profile .contact a {
@@ -377,6 +373,14 @@ h2 {
 
     .ludifica + hr {
         width: 67%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .contact {
+        width: 75%;
+        margin: auto;
     }
 }
 
