@@ -23,8 +23,7 @@ h1, h2, h3 {
 }
 
 #main > div  {
-    min-height: 100vh;
-    scroll-snap-align: start;
+    min-height: 77vh;
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -44,7 +43,7 @@ h2 {
 }
 
 #main > #profile {
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #profile > .me {
@@ -92,7 +91,7 @@ h2 {
     font-weight: 500;
     color: #BFCFE8;
     text-shadow: 1px 1px 15px #ffefc2;
-    letter-spacing: 7px;
+    letter-spacing: 8px;
     margin-left: -5px;
     margin-top: -8px;
     text-transform: uppercase;
@@ -277,8 +276,9 @@ h2 {
 }
 
 #profile .menu a:hover {
-    letter-spacing: 15px;
-    color: #FFEFC2;
+    letter-spacing: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 15px #fff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -289,7 +289,20 @@ h2 {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 936px) {
+
+    #main > div {
+        min-height: 92vh;
+    }
+
+    #portafolio .ludifica p {
+        text-align: left !important;
+        width: 592px;
+    }
+
+    .ludifica > div > div, .moreexperiences > div {
+        width: 100% !important;
+    }
 
     #profile .me a div h3 {
         font-size: 28px;
@@ -301,11 +314,11 @@ h2 {
 
     #profile .me a div h3,
     #profile .me a div p {
-    text-shadow: 1px 1px 5px #000;
-    margin: 0;
-    position: relative;
-    top: -46px;
-    line-height: 20px;
+        text-shadow: 1px 1px 5px #000;
+        margin: 0;
+        position: relative;
+        top: -46px;
+        line-height: 20px;
     }
 
     #profile .contact {
@@ -313,7 +326,7 @@ h2 {
     }
 
     #profile .contact a {
-        margin: -30px -15px;
+        margin: -46px -15px;
         min-width: 200px;
         min-height: 200px;
     }
@@ -339,13 +352,31 @@ h2 {
     }
 
     #profile > .me > div:last-child h2 {
-        margin: 0 0 0 11px;
-        font-size: 18px;
-        letter-spacing: 14px;
+        margin-left: 2px;
+    }
+
+    #profile > .me > div:last-child h2 span {
+        display: block;
+    }
+
+    #profile > .me > div:last-child h2 span:nth-child(2) {
+        opacity: 0;
+        line-height: 0;
     }
 
     .zoom-container a {
         pointer-events: none;
+    }
+
+    hr {
+        display: block !important;
+        border-top: 10px dotted #FFEFC2;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .ludifica + hr {
+        width: 67%;
     }
 }
 
@@ -388,15 +419,16 @@ h2 {
     border-radius: 6px;
 }
 
+
 #portafolio p strong {
-    color: #ffffffe4;
+    color: #7F96FF;
 }
 
 #portafolio p {
     color: #becee7;
-    background-color: #ffffff00;
     font-weight: 500;
     text-align: left;
+    margin-top: -60px;
 }
 
 .ludifica {
@@ -406,7 +438,11 @@ h2 {
 
 #portafolio .ludifica p {
     text-align: center;
-    max-width: 84%;
+}
+
+.appear {
+    opacity: 0;
+    animation: appearbottom 1s forwards 1s;
 }
 
 #portafolio p span {
@@ -570,22 +606,21 @@ h2 {
 .nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: -331px;
+    align-items: flex-end;
     position: relative;
     z-index: 3;
-    width: 100px;
-    right: -85%;
+    width: 42px;
+    left: 92%;
+    top: -280px;
     flex-direction: column-reverse;
 }
 
 .nav-btn {
     border: none;
-    font-size: 26px !important;
+    font-size: 26px;
     cursor: pointer;
     background: none;
-    text-shadow: 1px 1px 40px #ffefc2;
-    font-size: 22px;
+    text-shadow: 1px 1px 30px #ffefc2;
 }
 
 .prev-btn {
@@ -601,7 +636,7 @@ h2 {
 }
 
 .nav-btn:hover {
-    text-shadow: 1px 4px 20px #fff;
+    text-shadow: 1px 4px 40px #ffefc2;
     transform: scale(1.3, 1.3);
     animation-play-state: paused;
 }
@@ -646,8 +681,8 @@ h2 {
 
 .progress-bar {
     height: 6px;
-    margin-top: 252px;
     position: relative;
+    top: -80px;
     z-index: 3;
 }
 
@@ -678,28 +713,47 @@ h2 {
     display: block;
 }
 
-@media screen and (max-width: 930px) {
-    .ludifica > div > div, .moreexperiences > div {
-        width: 70%;
-    }
+hr {
+    mix-blend-mode: overlay;
+    width: 100%;
+    border-bottom: #fff0;
+    border-left: #fff0;
+    border-right: #fff0;
+    display: none;
+}
 
+@media screen and (max-width: 650px) {
     #portafolio .ludifica p {
-        text-align: left;
-        max-width: 84%;
-        width: 70%;
+        width: 94%;
     }
 
-    #portafolio p {
-        border-bottom: 1px solid #fff;
-        padding-bottom: 15px;
+    .ludifica + hr {
+        width: 90%;
     }
-
 }
 
 @media screen and (max-width: 512px) {
     .ludifica > div > div, .moreexperiences > div {
         min-width: fit-content;
-        
+    }
+
+    #portafolio > div,
+    #main > div {
+        padding: 0;
+    }
+
+    #portafolio .ludifica p {
+        margin-top: -71px;
+    }
+
+    .ludifica + hr {
+        width: 92%;
+    }
+
+    #main > div > h1 {
+        font-size: 80px;
+        text-align: center;
+        margin: -10px 0 -25px 0;
     }
 }
 
