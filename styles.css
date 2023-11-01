@@ -5,6 +5,7 @@ body {
     margin: 0;
     background-image: url('img/background.png');
     background-size: cover;
+    background-color: #494B6F;
 }
 
 #main {
@@ -394,7 +395,6 @@ h2 {
 #portafolio p {
     color: #becee7;
     background-color: #ffffff00;
-    border-radius: 6px;
     font-weight: 500;
     text-align: left;
 }
@@ -682,6 +682,25 @@ h2 {
     .ludifica > div > div, .moreexperiences > div {
         width: 70%;
     }
+
+    #portafolio .ludifica p {
+        text-align: left;
+        max-width: 84%;
+        width: 70%;
+    }
+
+    #portafolio p {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 15px;
+    }
+
+}
+
+@media screen and (max-width: 512px) {
+    .ludifica > div > div, .moreexperiences > div {
+        min-width: fit-content;
+        
+    }
 }
 
 .crm > div > div:nth-child(1) img {
@@ -696,6 +715,3 @@ h2 {
 .crm .zoom-container:hover {
     box-shadow: 1px 1px 100px #FFEFC290;
 }
-
-/* ponerle delay al fondo */
-/* bgcolorbody */
