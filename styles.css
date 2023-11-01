@@ -342,6 +342,10 @@ h2 {
         font-size: 18px;
         letter-spacing: 14px;
     }
+
+    .zoom-container a {
+        pointer-events: none;
+    }
 }
 
 #portafolio > div {
@@ -414,8 +418,11 @@ h2 {
     position: relative;
     background: none !important;
     box-sizing: border-box;
-    cursor: url('img/ovni_cursor.png'), auto;
     border-radius: 6px;
+}
+
+.zoom-container a {
+    cursor: url('img/ovni_cursor.png'), auto;
 }
 
 .zoom-container.nozoom {
@@ -469,14 +476,6 @@ h2 {
 
 .zoom-container:hover {
     box-shadow: 1px 1px 100px #FFEFC290;
-}
-.ludifica > div > div:nth-child(2) .zoom-image.nozoom {
-    filter: blur(10px);
-}
-
-.ludifica > div > div:nth-child(2) .zoom-image.nozoom:hover  {
-    transition: 0.2s ease-in;
-    filter: blur(0px);
 }
 
 .ludifica > div > div:first-child:hover {
@@ -685,19 +684,17 @@ h2 {
     }
 }
 
-.crm > div > div:nth-child(1) {
+.crm > div > div:nth-child(1) img {
     clip-path: inset(40px 0);
-    mix-blend-mode: lighten;
+
 }
 
-.crm > div > div:nth-child(3) {
+.crm > div > div:nth-child(3) img {
     clip-path: inset(70px 0 0 0);
-    mix-blend-mode: lighten;
 }
 
-.crm > div > div:nth-child(1):hover,
-.crm > div > div:nth-child(3):hover {
-    mix-blend-mode: normal;
+.crm .zoom-container:hover {
+    box-shadow: 1px 1px 100px #FFEFC290;
 }
 
 /* ponerle delay al fondo */
