@@ -431,7 +431,6 @@ h2 {
     color: #becee7;
     font-weight: 500;
     text-align: left;
-    margin-top: -60px;
 }
 
 .ludifica {
@@ -638,8 +637,8 @@ h2 {
     position: relative;
     z-index: 3;
     width: 42px;
-    left: 92%;
-    top: -280px;
+    left: 93%;
+    margin-top: -85px;
     flex-direction: column-reverse;
 }
 
@@ -710,8 +709,9 @@ h2 {
 .progress-bar {
     height: 6px;
     position: relative;
-    top: -80px;
+    top: 5px;
     z-index: 3;
+    pointer-events: none;
 }
 
 .progress-fill {
