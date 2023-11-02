@@ -549,7 +549,6 @@ h2 {
     justify-content: space-between;
     mix-blend-mode: color-dodge;
     scroll-snap-align: start;
-    background: radial-gradient(circle, #c6b992 0%, rgba(43,45,66,0) 35%);
     background-position-y: 57vh;
     background-repeat: no-repeat;
     cursor: url('img/heart_cursor.png'), auto;
@@ -613,14 +612,13 @@ h2 {
 }
 
 #end a:last-child > span {
-    font-weight: 700;
-    color: #2B2D42;
-    mix-blend-mode: revert;
+    font-weight: 400;
+    color: #becee7;
 }
 
 #end a:last-child:hover > span {
     font-weight: 400;
-    color: #fff;
+    color: #DC4B58;
 }
 
 .nav {
