@@ -12,7 +12,6 @@ body {
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-snap-type: y proximity;
     font-family: 'Rajdhani', sans-serif;
     color: #494B6F;
     scroll-behavior: smooth;
@@ -43,7 +42,6 @@ h2 {
 
 #main > #profile {
     justify-content: space-between;
-    scroll-snap-align: start;
 }
 
 #profile > .me {
@@ -416,7 +414,6 @@ h2 {
     width: 42%;
     min-width: 400px;
     margin: 15px;
-    scroll-snap-align: start;
     max-width: 590px;
 }
 
@@ -547,7 +544,6 @@ h2 {
     min-height: 95vh !important;
     justify-content: space-between;
     mix-blend-mode: color-dodge;
-    scroll-snap-align: start;
     background-position-y: 57vh;
     background-repeat: no-repeat;
     cursor: url('img/heart_cursor.png'), auto;
