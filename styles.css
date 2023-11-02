@@ -31,7 +31,6 @@ h1, h2, h3 {
 
 #main > div > h1 {
     color: #fff;
-    mix-blend-mode: soft-light;
     font-size: 100px;
     text-align: right;
     font-weight: 700;
@@ -263,7 +262,8 @@ h2 {
     justify-content: center;
 }
 
-#profile .menu a {
+#profile .menu a,
+#end .top {
     padding: 10px;
     text-decoration: none;
     color: #bfcfe8c8;
@@ -272,10 +272,12 @@ h2 {
     animation: appearbottom 1s forwards 1s;
     transition: .2s ease;
     letter-spacing: 5px;
+    text-align: center;
     text-shadow: 1px 1px 5px #000;
 }
 
-#profile .menu a:hover {
+#profile .menu a:hover,
+#end .top:hover {
     letter-spacing: 10px;
     color: #fff;
     text-shadow: 1px 1px 15px #fff;
@@ -541,70 +543,83 @@ h2 {
     transform: scale(1);
 }
 
-#end h1 {
-    line-height: 150%;
-    letter-spacing: 30px;
-    position: relative;
-    font-weight: 500 !important;
-    top: -19vh;
-    text-align: center !important;
+#end {
+    min-height: 95vh !important;
+    justify-content: space-between;
+    mix-blend-mode: color-dodge;
+    scroll-snap-align: start;
+    background: radial-gradient(circle, #c6b992 0%, rgba(43,45,66,0) 35%);
+    background-position-y: 57vh;
+    background-repeat: no-repeat;
     cursor: url('img/heart_cursor.png'), auto;
-    word-wrap: break-all;
+    padding: 0 !important;
+}
+
+#end h1 {
+    line-height: 26px;
+    letter-spacing: 15px;
+    margin-top: -23vh !important;
     color: #BFCFE8 !important;
-    margin: 0 !important;
+    font-weight: 500 !important;
+    font-size: 30px !important;
+    text-align: center !important;
+    transform: scale(1.5, 1.5);
 }
 
 #end h1:hover {
-    text-shadow: 1px 1px 40px #FFEFC290;
-}
-
-#end h1 > span {
-    mix-blend-mode: color-dodge;
+    text-shadow: 1px 1px 70px #FFEFC290;
 }
 
 #end h1 > span:nth-child(1) {
-    color: #DC4B58 !important;
-}
-
-#end h1 > span:nth-child(3) {
-    color: #BFCFE8 !important;
+    color: #c6b992 !important;
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: 13px;
+    position: relative;
+    bottom: -15px
 }
 
 #end h1 > span:last-child {
-    color: #c6b992 !important;
-}
-
-#end .top {
-    color: #FFEFC2;
-    text-decoration: none;
-    text-shadow: 1px 1px 5px #000;
-    letter-spacing: 6px;
-    font-weight: 400;
-    transition: .4s;
-}
-
-#end .top:hover {
-    letter-spacing: 10px;
-    color: #FFEFC2;
-    text-shadow: 1px 1px 15px #DC4B58;
-}
-
-#end .top + span {
-    display: block;
-    text-align: right;
+    color: #DC4B58 !important;
     font-weight: 700;
-    margin-top: -20px;
+    font-size: 63px;
+    letter-spacing: 0;
     position: relative;
-    top: 10px;
-    right: 27px;
-    color: #2B2D42;
+    top: 13px;
+    left: -5px;
 }
 
-#end {
-    min-height: 95vh !important;
-    justify-content: flex-end;
-    mix-blend-mode: color-dodge;
-    background: linear-gradient(-20deg, #c6b992 0%, rgba(43, 45, 66, 0) 10%);
+#end span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+#end a {
+    text-decoration: none;
+}
+
+#end a:last-child > span:first-child {
+    font-size: 26px;
+    letter-spacing: 0;
+    transform: scale(1, 1.5);
+    position: relative;
+    transition: .1s ease-in-out;
+}
+
+#end a:last-child > span:last-child  {
+    position: relative;
+}
+
+#end a:last-child > span {
+    font-weight: 700;
+    color: #2B2D42;
+    mix-blend-mode: revert;
+}
+
+#end a:last-child:hover > span {
+    font-weight: 400;
+    color: #fff;
 }
 
 .nav {
@@ -727,6 +742,7 @@ hr {
 }
 
 @media screen and (max-width: 650px) {
+
     #portafolio .ludifica p {
         width: 94%;
     }
@@ -737,6 +753,11 @@ hr {
 }
 
 @media screen and (max-width: 512px) {
+
+    #end h1 {
+        transform: scale(1, 1);
+    }
+
     .ludifica > div > div, .moreexperiences > div {
         min-width: fit-content;
     }
