@@ -64,7 +64,7 @@ h2 {
     border-right: 7px solid #DC4B58;
     white-space: nowrap;
     overflow: hidden;
-    text-shadow: 1px 1px 5px #0000008f;
+    text-shadow: 1px 1px 5px #000000be;
     width: 0ch;
     animation: typing1 0.5s steps(10, end) forwards, blink .5s step-end 0.2s forwards;
 }
@@ -77,7 +77,7 @@ h2 {
     color: #7F96FF;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 5px #0000008f;
+    text-shadow: 1px 1px 5px #000000be;
     border-right: 7px solid #DC4B58;
     white-space: nowrap;
     overflow: hidden;
@@ -90,7 +90,6 @@ h2 {
     font-size: 17px;
     font-weight: 500;
     color: #BFCFE8;
-    text-shadow: 1px 1px 5px #0000008f;
     letter-spacing: 7px;
     margin-left: -5px;
     margin-top: -8px;
@@ -570,13 +569,29 @@ h2 {
     text-shadow: 1px 1px 70px #FFEFC290;
 }
 
-#end h1 > span:nth-child(1) {
+#end h1 > span {
+    position: relative;
+}
+
+#end h1 > span:first-child {
+    letter-spacing: 57px;
+    left: 21px;
+    font-size: 18px;
+}
+
+#end h1 > span:nth-child(2) {
     color: #c6b992 !important;
     font-weight: 700;
     font-size: 70px;
     letter-spacing: 13px;
-    position: relative;
-    bottom: -15px
+    bottom: -12px
+}
+
+#end h1 > span:nth-child(3) {
+    letter-spacing: 20px;
+    left: 5px;
+    bottom: -25px;
+    font-size: 18px;
 }
 
 #end h1 > span:last-child {
@@ -584,8 +599,7 @@ h2 {
     font-weight: 700;
     font-size: 63px;
     letter-spacing: 0;
-    position: relative;
-    top: 13px;
+    top: 35px;
     left: -5px;
 }
 
