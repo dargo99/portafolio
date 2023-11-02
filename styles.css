@@ -87,11 +87,11 @@ h2 {
 }
 
 #profile > .me > div:last-child h2 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     color: #BFCFE8;
     text-shadow: 1px 1px 5px #0000008f;
-    letter-spacing: 8px;
+    letter-spacing: 7px;
     margin-left: -5px;
     margin-top: -8px;
     text-transform: uppercase;
