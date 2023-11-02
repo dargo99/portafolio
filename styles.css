@@ -43,6 +43,7 @@ h2 {
 
 #main > #profile {
     justify-content: space-between;
+    scroll-snap-align: start;
 }
 
 #profile > .me {
@@ -266,7 +267,7 @@ h2 {
 #end .top {
     padding: 10px;
     text-decoration: none;
-    color: #bfcfe8c8;
+    color: #BFCFE8;
     z-index: 1;
     opacity: 0;
     animation: appearbottom 1s forwards 1s;
@@ -721,7 +722,7 @@ h2 {
     right: -23px;
     bottom: -4px;
     font-size: 22px;
-    text-shadow: 0 0 10px #EF233C;
+    text-shadow: 0 0 10px #DC4B58;
 }
 
 .slide {
@@ -794,3 +795,35 @@ hr {
 .crm .zoom-container:hover {
     box-shadow: 1px 1px 100px #FFEFC290;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #BFCFE8;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #BFCFE8;
+}
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #7F96FF;
+}
+
+/* Barra de desplazamiento vertical en Firefox */
+html {
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #BFCFE8 transparent; /* Color del mango y el riel */
+  }
+  
+  /* Riel de la barra de desplazamiento en Firefox */
+  html {
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #BFCFE8 transparent; /* Color del mango y el riel */
+  }
+
+  
