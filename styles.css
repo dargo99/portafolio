@@ -25,7 +25,6 @@ h1, h2, h3 {
     min-height: 77vh;
     display: flex;
     flex-direction: column;
-    padding: 15px;
 }
 
 #main > div > h1 {
@@ -767,11 +766,6 @@ hr {
         min-width: fit-content;
     }
 
-    #portafolio > div,
-    #main > div {
-        padding: 0;
-    }
-
     .ludifica + hr {
         width: 92%;
     }
@@ -814,16 +808,13 @@ hr {
     background-color: #7F96FF;
 }
 
-/* Barra de desplazamiento vertical en Firefox */
 html {
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
-    scrollbar-color: #BFCFE8 transparent; /* Color del mango y el riel */
-  }
-  
-  /* Riel de la barra de desplazamiento en Firefox */
-  html {
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
-    scrollbar-color: #BFCFE8 transparent; /* Color del mango y el riel */
-  }
+    scrollbar-width: thin;
+    scrollbar-color: #BFCFE8 transparent;
+}
 
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #BFCFE8 transparent;
+}
   
