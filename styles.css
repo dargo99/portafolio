@@ -763,10 +763,6 @@ hr {
 
 @media screen and (max-width: 512px) {
 
-    #end h1 {
-        transform: scale(1, 1);
-    }
-
     .ludifica > div > div, .moreexperiences > div {
         min-width: fit-content;
     }
