@@ -777,12 +777,12 @@ hr {
     }
 }
 
-.crm > div > div:nth-child(1) img {
+.crm > div > div:nth-child(1) video {
     clip-path: inset(40px 0);
 
 }
 
-.crm > div > div:nth-child(3) img {
+.crm > div > div:nth-child(3) video {
     clip-path: inset(70px 0 0 0);
 }
 
