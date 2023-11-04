@@ -535,6 +535,7 @@ h2 {
 
 .presentation:hover .zoom-image {
     mix-blend-mode: normal;
+    opacity: 1;
 }
 
 .zoom-container:hover .zoom-image.nozoom {
