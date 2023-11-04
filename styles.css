@@ -766,6 +766,10 @@ hr {
         min-width: fit-content;
     }
 
+    #end h1 {
+        transform: scale(1, 1);
+    }
+
     .ludifica + hr {
         width: 92%;
     }
