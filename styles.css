@@ -631,6 +631,7 @@ h2 {
 #end a:last-child:hover > span {
     font-weight: 400;
     color: #DC4B58;
+    cursor: none;
 }
 
 .nav {
