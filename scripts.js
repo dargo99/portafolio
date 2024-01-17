@@ -39,7 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const prevSlideIndex = (currentSlide - 1 + slides.length) % slides.length;
             goToSlide(prevSlideIndex);
         });
-        
+
+        slides.forEach((slide) => {
+            slide.addEventListener('click', function() {
+                const nextSlideIndex = (currentSlide + 1) % slides.length;
+                goToSlide(nextSlideIndex);
+            });
+        });
+
         slides[currentSlide].classList.add('active');
         updateProgress();
     });

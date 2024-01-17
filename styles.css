@@ -6,6 +6,7 @@ body {
     background-image: url('img/background.png');
     background-size: cover;
     background-color: #494B6F;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 #main {
@@ -21,12 +22,6 @@ h1, h2, h3 {
     color: #7F96FF;
 }
 
-#main > div  {
-    min-height: 77vh;
-    display: flex;
-    flex-direction: column;
-}
-
 #main > div > h1 {
     color: #fff;
     font-size: 100px;
@@ -39,14 +34,11 @@ h2 {
     text-align: center;
 }
 
-#main > #profile {
-    justify-content: space-between;
-}
-
 #profile > .me {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10%;
 }
 
 #profile > .me > div:last-child > h1:first-child {
@@ -67,6 +59,8 @@ h2 {
 }
 
 #profile > .me > div:last-child h1:nth-child(2) {
+    position: relative;
+    z-index: 1;
     font-weight: 700;
     font-size: 98px;
     margin: -13px -0 -27px 0;
@@ -84,11 +78,11 @@ h2 {
 }
 
 #profile > .me > div:last-child h2 {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     color: #BFCFE8;
-    letter-spacing: 7px;
-    margin-left: -5px;
+    letter-spacing: 20px;
+    margin-left: 8px;
     margin-top: -8px;
     text-transform: uppercase;
     opacity: 0;
@@ -193,16 +187,14 @@ h2 {
     animation: appearbottom 1s forwards 3s;
 }
 
-#profile .contact {
+.contact {
     display: flex;
-    position: relative;
-    justify-content: space-around;
+    justify-content: space-evenly;
     opacity: 0;
-    animation: appearbottom 1s forwards 2s;
-    flex-wrap: wrap;
+    animation: appearbottom 1s forwards 3s;
 }
 
-#profile .contact a {
+.contact a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,40 +208,28 @@ h2 {
     z-index: 1;
 }
 
-#profile .contact a:hover::before {
+.contact a:hover::before {
     content: '';
     min-width: 350px;
     min-height: 350px;
-    background: radial-gradient(circle, #FFEFC2 0%, rgba(239,35,60,0) 65%);
+    background: radial-gradient(circle, #fff 0%, rgba(239,35,60,0) 65%);
     position: absolute;
     pointer-events: none;
     z-index: -1;
 }
 
-#profile .contact a:nth-child(2):hover::before {
-    background: radial-gradient(circle, #FFEFC2 0%, rgba(239,35,60,0) 65%);
-}
-
-#profile .contact a:nth-child(3):hover::before {
-    background: radial-gradient(circle, #7F96FF 0%, rgba(239,35,60,0) 65%);
-}
-
-#profile .contact a:nth-child(4):hover::before {
-    background: radial-gradient(circle, #DC4B58 0%, rgba(239,35,60,0) 65%);
-}
-
-#profile .contact a i {
+.contact a i {
     font-size: 30px;
     margin-bottom: 15px;
     color: #fff;
 }
 
-#profile .contact a:hover span {
+.contact a:hover span {
     font-weight: 500;
 }
 
-#profile .contact a:hover i,
-#profile .contact a:hover span {
+.contact a:hover i,
+.contact a:hover span {
     text-shadow: 0px 0px 0px #000000a4;
     color: #2B2D42;
 }
@@ -280,8 +260,12 @@ h2 {
     text-shadow: 1px 1px 15px #fff;
 }
 
+#portafolio {
+    margin-top: 10%;
+}
+
 @media screen and (max-width: 1000px) {
-    #profile .contact a {
+    .contact a {
         margin: -25px -25px;
         min-width: 200px;
         min-height: 200px;
@@ -292,11 +276,6 @@ h2 {
 
     #main > div {
         min-height: 74vh;
-    }
-
-    #portafolio .ludifica p {
-        text-align: left !important;
-        width: 592px;
     }
 
     .ludifica > div > div, .moreexperiences > div {
@@ -320,7 +299,7 @@ h2 {
         line-height: 20px;
     }
 
-    #profile .contact a {
+    .contact a {
         margin: -46px -15px;
         min-width: 200px;
         min-height: 200px;
@@ -413,7 +392,11 @@ h2 {
     width: 42%;
     min-width: 400px;
     margin: 15px;
-    max-width: 590px;
+    max-width: 900px;
+}
+
+.moreexperiences > div {
+    margin-bottom: 100px;
 }
 
 .moreexperiences .zoom-container {
@@ -421,24 +404,24 @@ h2 {
     border-radius: 6px;
 }
 
-
-#portafolio p strong {
-    color: #7F96FF;
-}
-
 #portafolio p {
-    color: #becee7;
+    background-color: #fff;
+    position: absolute;
+    left: 30%;
+    display: none;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    color: #494B6F;
     font-weight: 500;
     text-align: left;
+    box-shadow: 1px 1px 15px #000000e0;
+    border: 2px dashed #494B6F;
 }
 
 .ludifica {
     display: flex;
     flex-direction: column;
-}
-
-#portafolio .ludifica p {
-    text-align: center;
 }
 
 .appear {
@@ -458,12 +441,8 @@ h2 {
     border-radius: 6px;
 }
 
-.zoom-container a {
-    cursor: url('img/ovni_cursor.png'), auto;
-}
-
-.zoom-container.nozoom {
-    cursor: none;
+.zoom-container {
+    cursor: pointer;
 }
 
 .beforeux::after {
@@ -520,7 +499,7 @@ h2 {
 }
 
 .zoom-image {
-    transition: transform 0.2s ease-in 2s;
+    transition: transform 0.2s ease-in 1s;
     width: 100%;
     object-fit: cover;
     mix-blend-mode: lighten;
@@ -528,9 +507,9 @@ h2 {
 }
 
 .zoom-container:hover .zoom-image {
-    transform: scale(1.3);
+    transform: scale(1.1);
     opacity: 1;
-    transition: transform 0.2s ease-in 1s;
+    transition: transform 0.2s ease-in;
 }
 
 .presentation:hover .zoom-image {
@@ -550,6 +529,8 @@ h2 {
     background-repeat: no-repeat;
     cursor: url('img/heart_cursor.png'), auto;
     padding: 0 !important;
+    display: flex;
+    flex-direction: column;
 }
 
 #end h1 {
@@ -642,14 +623,15 @@ h2 {
     z-index: 3;
     width: 42px;
     left: 93%;
-    margin-top: -85px;
+    margin-top: -149px;
     flex-direction: column-reverse;
 }
 
 .nav-btn {
     border: none;
-    font-size: 26px;
+    font-size: 35px;
     cursor: pointer;
+    outline: none;
     background: none;
     text-shadow: 1px 1px 30px #ffefc2;
 }
@@ -667,7 +649,7 @@ h2 {
 }
 
 .nav-btn:hover {
-    text-shadow: 1px 4px 40px #ffefc2;
+    text-shadow: 1px 4px 40px #29586e;
     transform: scale(1.3, 1.3);
     animation-play-state: paused;
 }
@@ -711,11 +693,14 @@ h2 {
 }
 
 .progress-bar {
-    height: 6px;
-    position: relative;
-    top: 5px;
+    height: 7px;
+    display: flex;
+    justify-content: flex-start;
     z-index: 3;
     pointer-events: none;
+    transform: rotate(-90deg) translateX(39%);
+    position: relative;
+    left: -50%;
 }
 
 .progress-fill {
@@ -733,16 +718,23 @@ h2 {
     position: relative;
     right: -23px;
     bottom: -4px;
-    font-size: 22px;
+    font-size: 30px;
+    transform: rotate(-45deg);
     text-shadow: 0 0 10px #DC4B58;
+    transform: rotate(45deg) translate(10px, 9px);
 }
 
 .slide {
     display: none;
 }
 
-.slide.active {
+#portafolio .presentation:hover p {
     display: block;
+}
+
+.slide.active {
+    display: flex;
+    align-items: flex-end;
 }
 
 hr {
@@ -755,10 +747,6 @@ hr {
 }
 
 @media screen and (max-width: 650px) {
-
-    #portafolio .ludifica p {
-        width: 94%;
-    }
 
     .ludifica + hr {
         width: 90%;
@@ -787,12 +775,12 @@ hr {
 }
 
 .crm > div > div:nth-child(1) video {
-    clip-path: inset(40px 0);
+    clip-path: inset(55px 0);
 
 }
 
 .crm > div > div:nth-child(3) video {
-    clip-path: inset(70px 0 0 0);
+    clip-path: inset(93px 0 0 0);
 }
 
 .crm .zoom-container:hover {
