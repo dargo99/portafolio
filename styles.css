@@ -191,6 +191,9 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     opacity: 0;
+    height: 100px;
+    margin: -50px 0;
+    flex-wrap: wrap;
     animation: appearbottom 1s forwards 3s;
 }
 
@@ -264,6 +267,12 @@ h2 {
     margin-top: 10%;
 }
 
+@media screen and (max-width: 1400px) {
+    .nav + .progress-bar {
+        transform: rotate(-90deg) translateX(40%);
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .contact a {
         margin: -25px -25px;
@@ -272,10 +281,16 @@ h2 {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .ludifica > div > div, .moreexperiences > div {
+        width: 100% !important;
+    }
+}
+
 @media screen and (max-width: 936px) {
 
     #main > div {
-        min-height: 74vh;
+        min-height: 42vh;
     }
 
     .ludifica > div > div, .moreexperiences > div {
@@ -356,9 +371,16 @@ h2 {
 
 
 @media screen and (max-width: 750px) {
+
     .contact {
         width: 75%;
         margin: auto;
+    }
+
+    #portafolio p {
+        display: block !important;
+        left: 25% !important;
+        top: 40%  !important;
     }
 }
 
@@ -390,7 +412,7 @@ h2 {
 .ludifica > div > div, .moreexperiences > div {
     border-radius: 6px;
     width: 42%;
-    min-width: 400px;
+    min-width: 550px;
     margin: 15px;
     max-width: 900px;
 }
@@ -404,7 +426,7 @@ h2 {
     border-radius: 6px;
 }
 
-#portafolio p {
+#portafolio p, .moveable {
     background-color: #fff;
     position: absolute;
     left: 30%;
@@ -417,6 +439,8 @@ h2 {
     text-align: left;
     box-shadow: 1px 1px 15px #000000e0;
     border: 2px dashed #494B6F;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .ludifica {
@@ -698,9 +722,9 @@ h2 {
     justify-content: flex-start;
     z-index: 3;
     pointer-events: none;
-    transform: rotate(-90deg) translateX(39%);
+    transform: rotate(-90deg) translateX(46%);
     position: relative;
-    left: -50%;
+    left: -52%;
 }
 
 .progress-fill {
@@ -711,7 +735,6 @@ h2 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    box-shadow: 0 0 15px #ffffffb1;
 }
 
 .progress-fill span {
@@ -720,7 +743,7 @@ h2 {
     bottom: -4px;
     font-size: 30px;
     transform: rotate(-45deg);
-    text-shadow: 0 0 10px #DC4B58;
+    text-shadow: 0 0 30px #ffffffb1;
     transform: rotate(45deg) translate(10px, 9px);
 }
 

@@ -51,3 +51,24 @@ document.addEventListener('DOMContentLoaded', function() {
         updateProgress();
     });
 });
+
+  // Obtén todos los elementos <p> movibles dentro de .presentation
+  var moveableElements = document.querySelectorAll('.presentation p.moveable');
+
+  // Obtén el contenedor padre
+  var parentContainers = document.querySelectorAll('.presentation');
+
+  // Itera sobre todos los contenedores .presentation
+  parentContainers.forEach(function (parentContainer, index) {
+    // Agrega un evento de escucha para el movimiento del mouse en cada contenedor padre
+    parentContainer.addEventListener('mousemove', function (e) {
+      // Calcula las coordenadas relativas al contenedor padre
+      var parentRect = parentContainer.getBoundingClientRect();
+      var x = e.clientX - parentRect.left;
+      var y = e.clientY - parentRect.top;
+
+      // Actualiza la posición de todos los <p> movibles dentro del contenedor actual
+      moveableElements[index].style.left = x + 'px';
+      moveableElements[index].style.top = y + 'px';
+    });
+  });
