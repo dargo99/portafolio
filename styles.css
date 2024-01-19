@@ -18,10 +18,6 @@ body {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
-    color: #7F96FF;
-}
-
 #main > div > h1 {
     color: #fff;
     font-size: 100px;
@@ -65,7 +61,7 @@ h2 {
     font-size: 98px;
     margin: -13px -0 -27px 0;
     padding-top: 12px;
-    color: #7F96FF;
+    color: #fff;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 1px 5px #000000be;
@@ -78,16 +74,24 @@ h2 {
 }
 
 #profile > .me > div:last-child h2 {
-    font-size: 20px;
+    font-size: 21px;
+    width: 407px;
     font-weight: 500;
-    color: #BFCFE8;
-    letter-spacing: 20px;
+    color: #ffffff;
+    letter-spacing: 19px;
     margin-left: 8px;
     margin-top: -8px;
     text-transform: uppercase;
     opacity: 0;
     animation: appearbottom 1s forwards 1s;
     text-wrap: nowrap;
+    background-color: #0000002f;
+    backdrop-filter: blur( 5.5px );
+    border-radius: 3px;
+}
+
+#profile > .me > div:last-child h2 span {
+    letter-spacing: 0px;
 }
 
 @keyframes typing1 {
@@ -138,7 +142,6 @@ h2 {
     text-decoration: none;
     transform: scale(1, 1);
     transition: .2s ease;
-    mix-blend-mode: lighten;
 }
 
 #profile .me a:hover {
@@ -160,7 +163,7 @@ h2 {
 }
 
 #profile .me a:hover div {
-    filter: drop-shadow(5px 5px 22px #DC4B58);
+    filter: drop-shadow(5px 5px 52px #EE233C);
 }
 
 #profile .me a div h3,
@@ -168,7 +171,7 @@ h2 {
     text-shadow: 1px 1px 5px #000;
     margin: 0;
     position: relative;
-    top: -60px;
+    top: -50px;
     line-height: 25px;
 }
 
@@ -208,19 +211,23 @@ h2 {
     text-shadow: 1px 1px 5px #000;
     margin: -60px -60px;
     position: relative;
-    z-index: 1;
-
-    width: 300px;
+    z-index: 2;
+    width: 250px;
 }
 
-.contact a:hover::before {
+.contact a::after {
     content: '';
-    min-width: 350px;
-    min-height: 350px;
-    background: radial-gradient(circle, #fff 0%, rgba(239,35,60,0) 65%);
+    min-width: 500px;
+    min-height: 500px;
+    background: radial-gradient(circle, #0d1520e8 10%, #0d152000 70%);
     position: absolute;
     pointer-events: none;
     z-index: -1;
+}
+
+.contact a:hover::after {
+    content: '';
+    background: radial-gradient(circle, #ffffff 13%, #ffffff00 60%);
 }
 
 .contact a i {
@@ -229,8 +236,13 @@ h2 {
     color: #fff;
 }
 
+.contact a span {
+    opacity: 1;
+}
+
 .contact a:hover span {
     font-weight: 500;
+    opacity: 1;
 }
 
 .contact a:hover i,
@@ -248,7 +260,7 @@ h2 {
 #end .top {
     padding: 10px;
     text-decoration: none;
-    color: #BFCFE8;
+    color: #ffffff;
     z-index: 1;
     opacity: 0;
     animation: appearbottom 1s forwards 1s;
@@ -266,12 +278,26 @@ h2 {
 }
 
 #portafolio {
+    width: 95%;
+    margin: auto;
     margin-top: 10%;
+    background: rgba( 43, 45, 66, 0.35 );
+    box-shadow: 0 0 52px 0 #ffefc23d;
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@media screen and (max-width: 1600px) {
+    .nav + .progress-bar {
+        transform: rotate(-90deg) translateX(70%);
+    }
 }
 
 @media screen and (max-width: 1400px) {
     .nav + .progress-bar {
-        transform: rotate(-90deg) translateX(52%);
+        transform: rotate(-90deg) translateX(72%);
     }
 }
 
@@ -285,11 +311,25 @@ h2 {
     #portafolio {
         margin-top: 23%;
     }
+
+    .contact a::after {
+        min-width: 300px;
+        min-height: 300px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .ludifica > div > div, .moreexperiences > div {
         width: 100% !important;
+    }
+
+    .contact a::after {
+        min-width: 400px;
+        min-height: 400px;
+    }
+
+    .nav + .progress-bar {
+        transform: rotate(-90deg) translateX(63%);
     }
 }
 
@@ -331,7 +371,6 @@ h2 {
     }
 
     #profile > .me > div:last-child > h1:first-child {
-        font-size: 50px;
         margin: auto;
         bottom: 0;
     }
@@ -406,7 +445,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .ludifica > div > div, .moreexperiences > div {
@@ -415,10 +454,6 @@ h2 {
     min-width: 550px;
     margin: 15px;
     max-width: 900px;
-}
-
-.moreexperiences > div {
-    margin-bottom: 100px;
 }
 
 .moreexperiences .zoom-container {
@@ -437,8 +472,7 @@ h2 {
     color: #494B6F;
     font-weight: 500;
     text-align: left;
-    box-shadow: 1px 1px 15px #000000e0;
-    border: 2px dashed #494B6F;
+    box-shadow: rgba(238, 35, 60, 0.4) 5px 5px, rgba(238, 35, 60, 0.3) 10px 10px, rgba(238, 35, 60, 0.2) 15px 15px, rgba(238, 35, 60, 0.1) 20px 20px, rgba(238, 35, 60, 0.05) 25px 25px;
     z-index: 3;
     pointer-events: none;
 }
@@ -514,10 +548,6 @@ h2 {
     display: none;
 }
 
-.zoom-container:hover {
-    box-shadow: 1px 1px 100px #FFEFC290;
-}
-
 .ludifica > div > div:first-child:hover {
     box-shadow: 1px 1px 100px #ffefc200;
 }
@@ -526,8 +556,6 @@ h2 {
     transition: transform 0.2s ease-in 1s;
     width: 100%;
     object-fit: cover;
-    mix-blend-mode: lighten;
-    opacity: 0.85;
 }
 
 .zoom-container:hover .zoom-image {
@@ -548,7 +576,6 @@ h2 {
 #end {
     min-height: 95vh !important;
     justify-content: space-between;
-    mix-blend-mode: color-dodge;
     background-position-y: 57vh;
     background-repeat: no-repeat;
     cursor: url('img/heart_cursor.png'), auto;
@@ -566,10 +593,7 @@ h2 {
     font-size: 30px !important;
     text-align: center !important;
     transform: scale(1.5, 1.5);
-}
-
-#end h1:hover {
-    text-shadow: 1px 1px 70px #FFEFC290;
+    mix-blend-mode: color-dodge;
 }
 
 #end h1 > span {
@@ -595,6 +619,12 @@ h2 {
     left: 5px;
     bottom: -25px;
     font-size: 18px;
+    background-color: #000000b6;
+    mix-blend-mode: darken;
+    display: inline;
+    backdrop-filter: blur( 5.5px );
+    border-radius: 3px;
+    color: #ffffff;
 }
 
 #end h1 > span:last-child {
@@ -630,7 +660,7 @@ h2 {
 
 #end a:last-child > span {
     font-weight: 400;
-    color: #becee7;
+    color: #ffffff;
 }
 
 #end a:last-child:hover > span {
@@ -646,8 +676,8 @@ h2 {
     position: relative;
     z-index: 3;
     width: 42px;
-    left: 93%;
-    margin-top: -106px;
+    left: 99%;
+    top: -384px;
     flex-direction: column-reverse;
 }
 
@@ -722,7 +752,7 @@ h2 {
     justify-content: flex-start;
     z-index: 3;
     pointer-events: none;
-    transform: rotate(-90deg) translateX(52%);
+    transform: rotate(-90deg) translateX(66%);
     position: relative;
     left: -52%;
 }
@@ -774,10 +804,6 @@ hr {
     .ludifica + hr {
         width: 90%;
     }
-
-    #portafolio {
-        margin-top: 60%;
-    }
 }
 
 @media screen and (max-width: 512px) {
@@ -799,6 +825,50 @@ hr {
         text-align: center;
         margin: -10px 0 -25px 0;
     }
+
+    #portafolio {
+        width: 100%;
+    }
+
+    #portafolio p, .moveable {
+        left: 1% !important;
+        top: -10px !important;
+        font-size: 14px;
+        width: 250px;
+    }
+
+    .nav {
+        top: -10px;
+        left: 45%;
+    }
+
+    .ludifica > div > div, .moreexperiences > div {
+        margin: 15px 0;
+    }
+
+    #profile > .me > div:last-child > h1:first-child {
+        font-size: 54px;
+        font-weight: 700;
+    }
+
+    #profile > .me > div:last-child h2 {
+        font-size: 19px;
+        width: 276px;
+        font-weight: 500;
+        color: #ffffff;
+        letter-spacing: 10px;
+        margin-left: 7px;
+    }
+
+    .contact a::after {
+        content: '';
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    #portafolio {
+        margin-top: 116%;
+    }
 }
 
 .crm > div > div:nth-child(1) video {
@@ -810,12 +880,8 @@ hr {
     clip-path: inset(93px 0 0 0);
 }
 
-.crm .zoom-container:hover {
-    box-shadow: 1px 1px 100px #FFEFC290;
-}
-
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
 }
 
   ::-webkit-scrollbar-track {
@@ -823,13 +889,13 @@ hr {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #BFCFE8;
+    background-color: #ffffff;
     border-radius: 6px;
-    box-shadow: 0 0 15px #BFCFE8;
+    box-shadow: 0 0 25px #ffffff;
 }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #7F96FF;
+    background-color: #BFCFE8;
 }
 
 html {
@@ -850,7 +916,7 @@ html {
     position: fixed;
     pointer-events: none;
     opacity: 0;
-    animation: bright 42s ease-in-out 1 alternate;
+    animation: bright 60s ease-in-out 1 alternate;
     filter: brightness(200%);
     filter: blur(5px);
     transform: scale(3, 3);

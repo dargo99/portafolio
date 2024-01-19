@@ -1,4 +1,4 @@
-// images with zoom effect
+
 document.querySelectorAll('.zoom-container').forEach(container => {
     container.addEventListener('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
@@ -9,7 +9,6 @@ document.querySelectorAll('.zoom-container').forEach(container => {
     });
 });
 
-// Sliders control
 document.addEventListener('DOMContentLoaded', function () {
     const presentations = document.querySelectorAll('.presentation');
 
@@ -52,51 +51,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Obtén todos los elementos <p> movibles dentro de .presentation
 var moveableElements = document.querySelectorAll('.presentation p.moveable');
 
-// Obtén el contenedor padre
 var parentContainers = document.querySelectorAll('.presentation');
 
-// Itera sobre todos los contenedores .presentation
 parentContainers.forEach(function (parentContainer, index) {
-    // Agrega un evento de escucha para el movimiento del mouse en cada contenedor padre
+
     parentContainer.addEventListener('mousemove', function (e) {
-        // Calcula las coordenadas relativas al contenedor padre
         var parentRect = parentContainer.getBoundingClientRect();
         var x = e.clientX - parentRect.left;
         var y = e.clientY - parentRect.top;
 
-        // Actualiza la posición de todos los <p> movibles dentro del contenedor actual
+    
         moveableElements[index].style.left = x + 'px';
         moveableElements[index].style.top = y + 'px';
     });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtén todos los elementos con las clases .whoomp y .clic
+
     var whoompElements = document.querySelectorAll('.whoomp');
     var clicElements = document.querySelectorAll('.presentation');
     var bellElements = document.querySelectorAll('.bell');
 
-    // Crea elementos de audio para cada clase
     var whoompAudio = new Audio('audio/whoomp.mp3');
     var clicAudio = new Audio('audio/clic.mp3');
     var bellAudio = new Audio('audio/tilin.mp3');
     var airAudio = new Audio('audio/whoosh.mp3');
 
-    // Función para reproducir el audio al hacer hover
+    function setVolume(audioElement, volume) {
+        audioElement.volume = volume;
+    }
+
+
     function reproducirAudioHover(audioElement) {
+        setVolume(audioElement, 0.1);
         audioElement.play();
     }
 
-    // Función para detener la reproducción al salir del hover
+
     function detenerAudioHover(audioElement) {
         audioElement.pause();
         audioElement.currentTime = 0;
+        setVolume(audioElement, 1);
     }
 
-    // Agrega eventos a todos los elementos con la clase .whoomp
     whoompElements.forEach(function (element) {
         element.addEventListener('mouseenter', function () {
             reproducirAudioHover(whoompAudio);
@@ -107,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Agrega eventos a todos los elementos con la clase .clic
     clicElements.forEach(function (element) {
         element.addEventListener('mouseenter', function () {
             reproducirAudioHover(clicAudio);
@@ -118,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Agrega eventos a todos los elementos con la clase .bell
     bellElements.forEach(function (element) {
         element.addEventListener('mouseenter', function () {
             reproducirAudioHover(bellAudio);
@@ -133,15 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
         element.addEventListener('click', function () {
             reproducirAudioHover(airAudio);
         });
-    
+
         element.addEventListener('mouseleave', function () {
             detenerAudioHover(airAudio);
         });
     });
 });
 
-// JavaScript para el efecto de parallax
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-  document.getElementById('stars').style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-});
