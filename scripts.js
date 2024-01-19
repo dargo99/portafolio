@@ -128,7 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clicElements.forEach(function (element) {
         element.addEventListener('click', function () {
-            reproducirAudioHover(airAudio);
+            setVolume(airAudio, 0.5);
+            airAudio.play();
         });
 
         element.addEventListener('mouseleave', function () {
