@@ -6,7 +6,19 @@ body {
     background-image: url('img/background.png');
     background-size: cover;
     background-color: #2B2D42;
+    background-size: 120%;
     font-family: 'Rajdhani', sans-serif;
+    transition: background-size 0.5s ease;
+    animation: bgscale 150s ease-in-out 1;
+}
+
+@keyframes bgscale {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 120%;
+    }
 }
 
 #main {
@@ -916,8 +928,7 @@ html {
     position: fixed;
     pointer-events: none;
     opacity: 0;
-    animation: bright 60s ease-in-out 1 alternate;
-    filter: brightness(200%);
+    animation: bright 100s ease-in-out 1 alternate;
     filter: blur(5px);
     transform: scale(3, 3);
 }
@@ -930,10 +941,11 @@ html {
         transform: scale(1, 1);
         opacity: 1;
     }
+    
     100% {
         filter: brightness(200%);
         filter: blur(15px);
-        transform: scale(3, 3);
+        transform: scale(4, 4);
         opacity: 0;
     }
 }
