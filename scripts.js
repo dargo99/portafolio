@@ -71,7 +71,7 @@ parentContainers.forEach(function (parentContainer, index) {
 document.addEventListener("DOMContentLoaded", function () {
 
     var whoompElements = document.querySelectorAll('.whoomp');
-    var clicElements = document.querySelectorAll('.presentation');
+    var clicElements = document.querySelectorAll('.clic');
     var bellElements = document.querySelectorAll('.bell');
 
     var whoompAudio = new Audio('audio/whoomp.mp3');
