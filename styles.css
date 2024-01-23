@@ -46,6 +46,8 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
+    position: relative;
+    z-index: 1;
 }
 
 #profile > .me > div:last-child > h1:first-child {
@@ -598,71 +600,77 @@ h2 {
     padding: 0 !important;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #end h1 {
-    line-height: 26px;
     letter-spacing: 15px;
-    margin-top: -23vh !important;
-    color: #BFCFE8 !important;
-    font-weight: 500 !important;
-    font-size: 30px !important;
-    text-align: center !important;
-    transform: scale(1.5, 1.5);
-    mix-blend-mode: color-dodge;
-}
-
-#end h1 > span {
-    position: relative;
+    background: rgba( 43, 45, 66, 0.35 );
+    backdrop-filter: blur( 10px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 13px;
+    width: 300px;
+    padding: 15px;
+    line-height: 54px;
+    text-shadow: 1px 1px 5px #000000be;
 }
 
 #end h1 > span:first-child {
-    letter-spacing: 57px;
-    left: 21px;
-    font-size: 18px;
+    font-size: 30px;
+    margin-left: 3px;
+    letter-spacing: 54px;
 }
 
 #end h1 > span:nth-child(2) {
-    color: #c6b992 !important;
     font-weight: 700;
     font-size: 70px;
-    letter-spacing: 13px;
-    bottom: -12px
 }
 
 #end h1 > span:nth-child(3) {
-    letter-spacing: 20px;
-    left: 5px;
-    bottom: -25px;
-    font-size: 18px;
-    background-color: #000000b6;
-    mix-blend-mode: darken;
-    display: inline;
-    backdrop-filter: blur( 5.5px );
-    border-radius: 3px;
+    margin-left: 6px;
+    font-size: 30px;
     color: #ffffff;
+    letter-spacing: 15px;
 }
 
 #end h1 > span:last-child {
-    color: #DC4B58 !important;
     font-weight: 700;
     font-size: 63px;
-    letter-spacing: 0;
-    top: 35px;
-    left: -5px;
+    letter-spacing: 2px;
 }
 
 #end span {
     display: block;
     text-align: center;
-    font-size: 14px;
 }
 
 #end a {
     text-decoration: none;
 }
 
-#end a:last-child > span:first-child {
+#end a:last-child {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: -60px;
+}
+
+#end a:last-child > div {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #0d1520b0 0%, #0d152000 45%);
+}
+
+#end a:last-child:hover > div {
+    background: radial-gradient(circle, #ffffff 0%, #ffffff00 45%);
+}
+
+#end a:last-child > div > span:first-child {
     font-size: 26px;
     letter-spacing: 0;
     transform: scale(1, 1.5);
@@ -670,18 +678,18 @@ h2 {
     transition: .1s ease-in-out;
 }
 
-#end a:last-child > span:last-child  {
+#end a:last-child > div > span:last-child  {
     position: relative;
 }
 
-#end a:last-child > span {
+#end a:last-child > div > span {
     font-weight: 400;
     color: #ffffff;
 }
 
-#end a:last-child:hover > span {
+#end a:last-child:hover > div > span {
     font-weight: 700;
-    color: #fff;
+    color: #000;
     cursor: none;
 }
 
