@@ -800,16 +800,17 @@ h2 {
 
 @media screen and (max-width: 526px) {
 
-    #portafolio {
-        margin-top: 57vh
-    }
-
     #portafolio p, .moveable {
         width: 288px !important;
     }
 }
 
 @media screen and (max-width: 512px) {
+
+    
+    #portafolio {
+        margin-top: 80vh
+    }
 
     .ludifica > div > div, .moreexperiences > div {
         min-width: fit-content;
