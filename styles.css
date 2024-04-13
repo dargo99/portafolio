@@ -3,13 +3,15 @@
 body {
     overflow: hidden;
     margin: 0;
-    background-image: url('img/background.png');
+    background-image: url('img/background.jpg');
     background-color: #2B2D42;
     background-size: 140%;
     font-family: 'Rajdhani', sans-serif;
     transition: background-size 0.5s ease;
     animation: bgscale 80s 1;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -100px ;
 }
 
 @keyframes bgscale {
@@ -39,6 +41,7 @@ body {
 
 .design {
     margin: 0 !important;
+    color: #FABF74 !important;
 }
 
 h2 {
@@ -63,7 +66,7 @@ h2 {
     position: relative;
     bottom: -38px;
     letter-spacing: 1px;
-    border-right: 7px solid #fff;
+    border-right: 7px solid #E94F48;
     white-space: nowrap;
     overflow: hidden;
     text-shadow: 1px 1px 5px #000000be;
@@ -82,7 +85,7 @@ h2 {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 1px 5px #000000be;
-    border-right: 7px solid #fff;
+    border-right: 7px solid #E94F48;
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -94,7 +97,7 @@ h2 {
     font-size: 27px;
     width: 407px;
     font-weight: 500;
-    color: #ffffff;
+    color: #FABF74;
     letter-spacing: 2px;
     margin-left: 8px;
     margin-top: -8px;
@@ -134,7 +137,7 @@ h2 {
         border-color: transparent;
     }
     50% {
-        border-color: #fff;
+        border-color: #E94F48;
     }
 }
 
@@ -226,17 +229,24 @@ h2 {
 
 .contact a::after {
     content: '';
-    min-width: 500px;
-    min-height: 500px;
-    background: radial-gradient(circle, #121315e8 10%, #12131500 70%);
+    min-width: 400px;
+    min-height: 400px;
+    background: radial-gradient(circle, #1c192aa1 10%, #1c192a00 70%);
     position: absolute;
     pointer-events: none;
     z-index: -1;
 }
 
+.contact a span {
+    color: #ffd398;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 0.1s ease-out;
+}
+
 .contact a:hover::after {
     content: '';
-    background: radial-gradient(circle, #ffffff 13%, #ffffff00 60%);
+    background: radial-gradient(circle, #FABF74 0%, #FABF7400 70%);
 }
 
 .contact a i {
@@ -245,13 +255,9 @@ h2 {
     color: #fff;
 }
 
-.contact a span {
-    opacity: 1;
-}
-
 .contact a:hover span {
-    font-weight: 500;
-    opacity: 1;
+    font-weight: 600;
+    letter-spacing: 0px;
 }
 
 .contact a:hover i,
@@ -291,7 +297,7 @@ h2 {
     margin: auto;
     margin-top: 10%;
     background: rgba( 43, 45, 66, 0.35 );
-    box-shadow: 0 0 52px 0 #ffffff3d;
+    box-shadow: 0 0 75px 0 #E94F4859;
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
@@ -345,7 +351,7 @@ h2 {
 @media screen and (max-width: 936px) {
 
     body {
-        background-size: cover;
+        background-size: auto;
         animation: none;
     }
 
@@ -471,17 +477,17 @@ h2 {
     border-radius: 5px;
     letter-spacing: 2px;
     width: 357px;
-    color: #D2DDEE;
+    color: rgba(210, 221, 238, 0.932);
     font-weight: 500;
     text-align: left;
-    box-shadow: rgba(43, 45, 66, 0.4) 5px 5px, rgba(43, 45, 66, 0.3) 10px 10px, rgba(43, 45, 66, 0.2) 15px 15px, rgba(43, 45, 66, 0.1) 20px 20px, rgba(127, 45, 66, 0.05) 25px 25px;
+    box-shadow: rgba(43, 45, 66, 0.4) 5px 5px, rgba(43, 45, 66, 0.3) 10px 10px, rgba(43, 45, 66, 0.2) 15px 15px, rgba(43, 45, 66, 0.1) 20px 20px, rgba(43, 45, 66, 0.05) 25px 25px;
     z-index: 3;
     pointer-events: none;
     font-size: 18px;
 }
 
 .moveable strong {
-    color: #fff;
+    color: rgb(250, 191, 116);
 }
 
 .ludifica {
@@ -607,6 +613,7 @@ h2 {
 }
 
 #end h1 > span:nth-child(2) {
+    color: #FABF74;
     font-weight: 700;
     font-size: 70px;
 }
@@ -690,7 +697,7 @@ h2 {
     cursor: pointer;
     outline: none;
     background: none;
-    text-shadow: 1px 1px 30px #ffffff;
+    text-shadow: 1px 1px 30px #FABF74;
 }
 
 .prev-btn {
@@ -776,7 +783,7 @@ h2 {
     bottom: -4px;
     font-size: 30px;
     transform: rotate(-45deg);
-    text-shadow: 0 0 30px #ffffffb1;
+    text-shadow: 0 0 25px #f87250;
     transform: rotate(45deg) translate(10px, 9px);
 }
 
@@ -791,6 +798,14 @@ h2 {
 .slide.active {
     display: flex;
     align-items: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+    
+    body {
+        background-size: auto;
+        animation: none;
+    }
 }
 
 @media screen and (max-width: 512px) {
@@ -870,14 +885,14 @@ h2 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #fff;
+    background-color: #FABF74;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
     background-color: #222222;
     scrollbar-width: thin;
-    scrollbar-color: #fff #f1f1f1;
+    scrollbar-color: #FABF74 #f1f1f1;
 }
   
 #stars {
