@@ -204,10 +204,10 @@ h2 {
 
 .contact {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     opacity: 0;
-    height: 100px;
-    margin: -50px 0;
+    height: 250px;
+    margin-top: -80px;
     flex-wrap: wrap;
     animation: appearbottom 1s forwards 2s;
 }
@@ -221,10 +221,10 @@ h2 {
     justify-content: center;
     font-weight: 400;
     text-shadow: 1px 1px 5px #000;
-    margin: -60px -60px;
+    margin: 40px -48px;
     position: relative;
     z-index: 2;
-    width: 250px;
+    width: 310px;
 }
 
 .contact a::after {
@@ -240,7 +240,7 @@ h2 {
 .contact a span {
     color: #ffd398;
     font-size: 18px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     transition: 0.1s ease-out;
 }
 
@@ -295,7 +295,7 @@ h2 {
 #portafolio {
     width: 95%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     background: rgba( 43, 45, 66, 0.35 );
     box-shadow: 0 0 75px 0 #E94F4859;
     backdrop-filter: blur( 7.5px );
@@ -321,10 +321,6 @@ h2 {
         margin: -25px -25px;
         min-width: 200px;
         min-height: 200px;
-    }
-
-    #portafolio {
-        margin-top: 23%;
     }
 
     .contact a::after {
@@ -353,10 +349,6 @@ h2 {
     body {
         background-size: auto;
         animation: none;
-    }
-
-    #main > div {
-        min-height: 42vh;
     }
 
     .ludifica > div > div, .moreexperiences > div {
@@ -409,6 +401,11 @@ h2 {
 
 }
 
+@media screen and (max-width: 800px) {
+    #portafolio {
+        margin-top: 34%;
+    }
+}
 
 @media screen and (max-width: 750px) {
 
@@ -425,7 +422,7 @@ h2 {
 
     #portafolio p {
         display: block !important;
-        left: 25% !important;
+        left: 0% !important;
         top: 40%  !important;
     }
 }
@@ -808,6 +805,13 @@ h2 {
     }
 }
 
+@media screen and (max-width: 527px) {
+
+    #portafolio {
+        margin-top: 60vh
+    }
+}
+
 @media screen and (max-width: 512px) {
 
     .ludifica > div > div, .moreexperiences > div {
@@ -856,8 +860,7 @@ h2 {
         word-wrap: break-word;
         margin-top: 10px;
         font-weight: 500;
-        color: #ffffff;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
 
     .contact a::after {
@@ -867,7 +870,7 @@ h2 {
     }
 
     #portafolio {
-        margin-top: 116%;
+        margin-top: 70vh;
     }
 }
 
