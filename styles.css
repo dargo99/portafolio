@@ -5,10 +5,11 @@ body {
     margin: 0;
     background-image: url('img/background.png');
     background-color: #2B2D42;
-    background-size: 120%;
+    background-size: 140%;
     font-family: 'Rajdhani', sans-serif;
     transition: background-size 0.5s ease;
-    animation: bgscale 90s 1;
+    animation: bgscale 80s 1;
+    background-position: center;
 }
 
 @keyframes bgscale {
@@ -16,7 +17,7 @@ body {
         background-size: 100%;
     }
     100% {
-        background-size: 120%;
+        background-size: 140%;
     }
 }
 
@@ -34,7 +35,10 @@ body {
     font-size: 100px;
     text-align: right;
     font-weight: 700;
-    margin: -30px 0 -45px 0;
+}
+
+.design {
+    margin: 0 !important;
 }
 
 h2 {
@@ -59,7 +63,7 @@ h2 {
     position: relative;
     bottom: -38px;
     letter-spacing: 1px;
-    border-right: 7px solid #DC4B58;
+    border-right: 7px solid #fff;
     white-space: nowrap;
     overflow: hidden;
     text-shadow: 1px 1px 5px #000000be;
@@ -78,7 +82,7 @@ h2 {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 1px 5px #000000be;
-    border-right: 7px solid #DC4B58;
+    border-right: 7px solid #fff;
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -87,11 +91,11 @@ h2 {
 }
 
 #profile > .me > div:last-child h2 {
-    font-size: 21px;
+    font-size: 27px;
     width: 407px;
     font-weight: 500;
     color: #ffffff;
-    letter-spacing: 19px;
+    letter-spacing: 2px;
     margin-left: 8px;
     margin-top: -8px;
     text-transform: uppercase;
@@ -130,7 +134,7 @@ h2 {
         border-color: transparent;
     }
     50% {
-        border-color: #DC4B58;
+        border-color: #fff;
     }
 }
 
@@ -195,14 +199,6 @@ h2 {
     animation: appearbottom 1s forwards 2.5s;
 }
 
-#profile > .me a div p {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
-    opacity: 0;
-    animation: appearbottom 1s forwards 3s;
-}
-
 .contact {
     display: flex;
     justify-content: space-evenly;
@@ -210,7 +206,7 @@ h2 {
     height: 100px;
     margin: -50px 0;
     flex-wrap: wrap;
-    animation: appearbottom 1s forwards 3s;
+    animation: appearbottom 1s forwards 2s;
 }
 
 .contact a {
@@ -232,7 +228,7 @@ h2 {
     content: '';
     min-width: 500px;
     min-height: 500px;
-    background: radial-gradient(circle, #0d1520e8 10%, #0d152000 70%);
+    background: radial-gradient(circle, #121315e8 10%, #12131500 70%);
     position: absolute;
     pointer-events: none;
     z-index: -1;
@@ -295,7 +291,7 @@ h2 {
     margin: auto;
     margin-top: 10%;
     background: rgba( 43, 45, 66, 0.35 );
-    box-shadow: 0 0 52px 0 #ffefc23d;
+    box-shadow: 0 0 52px 0 #ffffff3d;
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
@@ -388,15 +384,6 @@ h2 {
         min-height: 250px;
     }
 
-    #profile > .me > div:last-child > h1:first-child {
-        margin: auto;
-        bottom: 0;
-    }
-
-    #profile > .me > div:last-child h1:nth-child(2) {
-        display: none;
-    }
-
     #profile > .me > div:last-child h2 {
         margin-left: 2px;
     }
@@ -414,23 +401,19 @@ h2 {
         pointer-events: none;
     }
 
-    hr {
-        display: block !important;
-        border-top: 10px dotted #FFEFC2;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .ludifica + hr {
-        width: 67%;
-    }
 }
 
 
 @media screen and (max-width: 750px) {
 
+    #portafolio p, .moveable {
+        left: 1% !important;
+        top: -10px !important;
+        font-size: 14px;
+        width: 250px;
+    }
+
     .contact {
-        width: 75%;
         margin: auto;
     }
 
@@ -480,19 +463,25 @@ h2 {
 }
 
 #portafolio p, .moveable {
-    background-color: #fff;
+    background-color: rgb(43, 45, 66);
     position: absolute;
     left: 30%;
     display: none;
     padding: 15px;
     border-radius: 5px;
-    width: 300px;
-    color: #494B6F;
+    letter-spacing: 2px;
+    width: 357px;
+    color: #D2DDEE;
     font-weight: 500;
-    text-align: justify;
-    box-shadow: rgba(238, 35, 60, 0.4) 5px 5px, rgba(238, 35, 60, 0.3) 10px 10px, rgba(238, 35, 60, 0.2) 15px 15px, rgba(238, 35, 60, 0.1) 20px 20px, rgba(238, 35, 60, 0.05) 25px 25px;
+    text-align: left;
+    box-shadow: rgba(43, 45, 66, 0.4) 5px 5px, rgba(43, 45, 66, 0.3) 10px 10px, rgba(43, 45, 66, 0.2) 15px 15px, rgba(43, 45, 66, 0.1) 20px 20px, rgba(127, 45, 66, 0.05) 25px 25px;
     z-index: 3;
     pointer-events: none;
+    font-size: 18px;
+}
+
+.moveable strong {
+    color: #fff;
 }
 
 .ludifica {
@@ -503,10 +492,6 @@ h2 {
 .appear {
     opacity: 0;
     animation: appearbottom 1s forwards 1s;
-}
-
-#portafolio p span {
-    color: #FFEFC2;
 }
 
 .zoom-container {
@@ -663,11 +648,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, #0d1520b0 0%, #0d152000 45%);
-}
-
-#end a:last-child:hover > div {
-    background: radial-gradient(circle, #ffffff 0%, #ffffff00 45%);
 }
 
 #end a:last-child > div > span:first-child {
@@ -683,14 +663,13 @@ h2 {
 }
 
 #end a:last-child > div > span {
-    font-weight: 400;
+    font-weight: 500;
     color: #ffffff;
+    text-shadow: 1px 1px 3px #000;
 }
 
 #end a:last-child:hover > div > span {
-    font-weight: 700;
-    color: #000;
-    cursor: none;
+    transform: scale(1.1, 1.1);
 }
 
 .nav {
@@ -711,7 +690,7 @@ h2 {
     cursor: pointer;
     outline: none;
     background: none;
-    text-shadow: 1px 1px 30px #ffefc2;
+    text-shadow: 1px 1px 30px #ffffff;
 }
 
 .prev-btn {
@@ -814,34 +793,22 @@ h2 {
     align-items: flex-end;
 }
 
-hr {
-    mix-blend-mode: overlay;
-    width: 100%;
-    border-bottom: #fff0;
-    border-left: #fff0;
-    border-right: #fff0;
-    display: none;
-}
-
-@media screen and (max-width: 650px) {
-
-    .ludifica + hr {
-        width: 90%;
-    }
-}
-
 @media screen and (max-width: 512px) {
 
     .ludifica > div > div, .moreexperiences > div {
         min-width: fit-content;
     }
 
-    #end h1 {
-        transform: scale(1, 1);
+    #profile > .me > div:last-child > h1:first-child {
+        bottom: -30px;
     }
 
-    .ludifica + hr {
-        width: 92%;
+    #profile > .me > div:last-child h1:nth-child(2) {
+        font-size: 67px;
+    }
+
+    #end h1 {
+        transform: scale(1, 1);
     }
 
     #main > div > h1 {
@@ -852,13 +819,6 @@ hr {
 
     #portafolio {
         width: 100%;
-    }
-
-    #portafolio p, .moveable {
-        left: 1% !important;
-        top: -10px !important;
-        font-size: 14px;
-        width: 250px;
     }
 
     .nav {
@@ -877,11 +837,12 @@ hr {
 
     #profile > .me > div:last-child h2 {
         font-size: 19px;
-        width: 276px;
+        width: 100px;
+        word-wrap: break-word;
+        margin-top: 10px;
         font-weight: 500;
         color: #ffffff;
-        letter-spacing: 10px;
-        margin-left: 7px;
+        letter-spacing: 2px;
     }
 
     .contact a::after {
@@ -905,31 +866,18 @@ hr {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f100;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 6px;
-    box-shadow: 0 0 25px #ffffff;
 }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #BFCFE8;
-}
-
-html {
+::-webkit-scrollbar-track {
+    background-color: #222222;
     scrollbar-width: thin;
-    scrollbar-color: #BFCFE8 transparent;
-}
-
-html {
-    scrollbar-width: thin;
-    scrollbar-color: #BFCFE8 transparent;
+    scrollbar-color: #fff #f1f1f1;
 }
   
 #stars {
@@ -940,7 +888,7 @@ html {
     position: fixed;
     pointer-events: none;
     opacity: 0;
-    animation: bright 100s ease-in-out 1 alternate;
+    animation: bright 60s ease-in-out 1 alternate;
     filter: blur(5px);
     transform: scale(3, 3);
 }
