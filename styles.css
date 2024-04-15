@@ -953,12 +953,17 @@ h2 {
         padding: 5px !important;
         margin-top: 5px !important;
     }
+
+    #profile {
+        margin-top: -40px !important;
+    }
 }
 
 .lang a {
     color: #fff;
     background-color: #ffffff11;
-    position: absolute;
+    position: relative;
+    display: inline-block;
     z-index: 2;
     padding: 15px;
     margin-top: 15px;
@@ -970,4 +975,8 @@ h2 {
 .lang a:hover {
     color: #FABF74;
     background-color: #0000002f;
-} 
+}
+
+#profile {
+    margin-top: -64px;
+}
