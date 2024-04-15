@@ -59,8 +59,8 @@ parentContainers.forEach(function (parentContainer, index) {
 
     parentContainer.addEventListener('mousemove', function (e) {
         var parentRect = parentContainer.getBoundingClientRect();
-        var x = e.clientX - parentRect.left;
-        var y = e.clientY - parentRect.top;
+        var x = e.clientX - parentRect.left - 380;
+        var y = e.clientY - parentRect.top + 15;
 
     
         moveableElements[index].style.left = x + 'px';

@@ -297,7 +297,7 @@ h2 {
     margin: auto;
     margin-top: 5%;
     background: rgba( 43, 45, 66, 0.35 );
-    box-shadow: 0 0 75px 0 #E94F4859;
+    box-shadow: 0 0 15px 0 #000000a4;
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
@@ -329,7 +329,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1257px) {
     .ludifica > div > div, .moreexperiences > div {
         width: 100% !important;
     }
@@ -470,8 +470,8 @@ h2 {
     color: rgba(210, 221, 238, 0.932);
     font-weight: 500;
     text-align: left;
-    box-shadow: rgba(43, 45, 66, 0.4) 5px 5px, rgba(43, 45, 66, 0.3) 10px 10px, rgba(43, 45, 66, 0.2) 15px 15px, rgba(43, 45, 66, 0.1) 20px 20px, rgba(43, 45, 66, 0.05) 25px 25px;
-    z-index: 3;
+    box-shadow: rgba(43, 45, 66, 0.4) -5px 5px, rgba(43, 45, 66, 0.3) -10px 10px, rgba(43, 45, 66, 0.2) -15px 15px, rgba(43, 45, 66, 0.1) -20px 20px, rgba(43, 45, 66, 0.05) -25px 25px;
+    z-index: 4;
     pointer-events: none;
     font-size: 18px;
 }
@@ -568,6 +568,10 @@ h2 {
     opacity: 1;
 }
 
+.presentation {
+    position: relative;
+}
+
 .zoom-container:hover .zoom-image.nozoom {
     transform: scale(1);
 }
@@ -594,6 +598,7 @@ h2 {
     padding: 15px;
     line-height: 54px;
     text-shadow: 1px 1px 5px #000000be;
+    box-shadow: 0 0 15px 0 #000000a4;
 }
 
 #end h1 > span:first-child {
@@ -674,7 +679,7 @@ h2 {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    z-index: 3;
+    z-index: 5;
     width: 42px;
     left: 99%;
     top: -384px;
@@ -883,12 +888,12 @@ h2 {
     }
 
 }
-.crm > div > div:nth-child(1) video {
+.crm > div > div:nth-child(2) video {
     clip-path: inset(55px 0);
 
 }
 
-.crm > div > div:nth-child(3) video {
+.crm > div > div:nth-child(4) video {
     clip-path: inset(93px 0 0 0);
 }
 
@@ -934,5 +939,18 @@ h2 {
         filter: blur(15px);
         transform: scale(4, 4);
         opacity: 0;
+    }
+}
+
+#portafolio .info {
+    display: block;
+    color: rgba(210, 221, 238, 0.932);
+    text-align: right;
+}
+
+@media screen and (max-width: 619px) {
+
+    #portafolio .info {
+        text-align: center;
     }
 }
