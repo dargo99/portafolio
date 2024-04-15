@@ -948,4 +948,26 @@ h2 {
     #portafolio .info {
         text-align: center;
     }
+
+    .lang a {
+        padding: 5px !important;
+        margin-top: 5px !important;
+    }
 }
+
+.lang a {
+    color: #fff;
+    background-color: #ffffff11;
+    position: absolute;
+    z-index: 2;
+    padding: 15px;
+    margin-top: 15px;
+    text-decoration: none;
+    backdrop-filter: blur( 5.5px );
+    border-radius: 6px;
+}
+
+.lang a:hover {
+    color: #FABF74;
+    background-color: #0000002f;
+} 
