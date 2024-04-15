@@ -465,15 +465,14 @@ h2 {
     display: none;
     padding: 15px;
     border-radius: 5px;
-    letter-spacing: 2px;
-    width: 357px;
+    width: 240px;
     color: rgba(210, 221, 238, 0.932);
     font-weight: 500;
-    text-align: left;
+    text-align: justify;
     box-shadow: rgba(43, 45, 66, 0.4) -5px 5px, rgba(43, 45, 66, 0.3) -10px 10px, rgba(43, 45, 66, 0.2) -15px 15px, rgba(43, 45, 66, 0.1) -20px 20px, rgba(43, 45, 66, 0.05) -25px 25px;
     z-index: 4;
     pointer-events: none;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .moveable strong {
@@ -807,10 +806,6 @@ h2 {
 
     #portafolio {
         margin-top: 57vh
-    }
-
-    #portafolio p, .moveable {
-        width: 288px !important;
     }
 }
 

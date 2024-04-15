@@ -59,7 +59,7 @@ parentContainers.forEach(function (parentContainer, index) {
 
     parentContainer.addEventListener('mousemove', function (e) {
         var parentRect = parentContainer.getBoundingClientRect();
-        var x = e.clientX - parentRect.left - 380;
+        var x = e.clientX - parentRect.left - 270;
         var y = e.clientY - parentRect.top + 15;
 
     
