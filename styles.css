@@ -405,6 +405,16 @@ h2 {
     #portafolio {
         margin-top: 34%;
     }
+
+    
+    #profile {
+        margin-top: -40px !important;
+    }
+
+    .lang a {
+        padding: 5px !important;
+        margin-top: 5px !important;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -947,15 +957,6 @@ h2 {
 
     #portafolio .info {
         text-align: center;
-    }
-
-    .lang a {
-        padding: 5px !important;
-        margin-top: 5px !important;
-    }
-
-    #profile {
-        margin-top: -40px !important;
     }
 }
 
